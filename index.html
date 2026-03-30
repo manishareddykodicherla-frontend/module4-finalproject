@@ -17,26 +17,25 @@
         </ul>
     </nav>
 <body>
-    <div class="filter">
-        <select class="movieFilter">
-            <option value="" selected disabled>sort</option>
-            <option value="movie Year">movie year, new__to__old </option>
-            <option value="movieName">movie Name</option>
-            
-        </select>
-    </div>
  <div class="container">
     <div class="row">
+        <div class="filter">
+        <select class="movieFilter" onChange="movieSearch(event)">
+            <option value="" >selected disabled>sort</option>
+            <option value="movie Year">movie year, new__to__old </option>
+            <option value="movieName">movie Name</option>   
+        </select>
+    </div>
         <div class="movie__lists">
             <div class="movie__list">
     <figure class="movieImage">
-        <img>
+        <img src="" class="movielogo">
     </figure>
     <h2 class="moviePrice">MoviePrice</h2>
     <h4 class="name">MovieName</h4>
     <h4 class="Year">Year</h4>
     <h4 class="imdb">IMDB</h4>
-   
+   </div>
  </div>   
  </div>
  </div>

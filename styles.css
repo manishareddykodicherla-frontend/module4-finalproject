@@ -39,31 +39,35 @@ a:hover{
 }
 .movie__lists{
 padding:20px;
-  display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
-    justify-content: space-between;
+display: flex;
+  flex-direction: row;
+  
+  
 }
 .movie__list{
     border: 5px solid aliceblue;
     border-radius:10px;
     padding:2px 16px;
-    width:calc(100% / 4);
-    flex: 1;
-    
 }
 .movieImage{
-    width:100%;
+    width:50px;
+
+}
+.movielogo{
+    width:50px;
 }
 .filter{
     width:50px;
-    position: absolute;
+    position: relative;
     
 }
 .movieFilter{
-    position:relative;
+    position:absolute;
     top: 0;
     left:900px;
     padding:10px;
     margin-bottom:10px;
+}
+.row{
+    display:flex;
 }
