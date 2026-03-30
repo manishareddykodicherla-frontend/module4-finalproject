@@ -1,13 +1,19 @@
 // API KEY: http://www.omdbapi.com/?i=tt3896198&apikey=9a6c4194
 let moviesData=[]
-async function showTime(){
+async function showTime(filter){
  const showHours= await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=9a6c4194&S=movie`);
  const showMinutes= await showHours.json();
  moviesData=showMinutes.Search;
  console.log(moviesData)
  let movies=document.querySelector(".movie__list");
  movies.innerHTML= showMinutes.Search.map((showHour)=>movieTime(showHour)).join("");
+  if(filter==="movie Year"){
+    console.log(filter)
+ const filteredMovies=showMinutes.Search.sort((a,b)=>a.Year - b.Year);
+ console.log(filteredMovies)
+    }
 }
+
 showTime()
  function movieTime(movie){
     return `
@@ -23,19 +29,10 @@ showTime()
  </div>
  </div>`
  }
- function movieSearch(filter){
-    if (filter === "movie Year") {
-    moviesData.sort((a, b) => b.Year - a.Year);
-  } else if (filter === "movieName") {
-    moviesData.sort((a, b) => a.Title.localeCompare(b.Title));
-  }
- let movies=document.querySelector(".movie__list");
- movies.innerHTML= showMinutes.Search.map((showHour)=>movieTime(showHour)).join("");
-document.querySelector(".movieFilter").addEventListener("change", (event) => {
-  movieSearch(event.target.value);
-});
+ function movieSearch(event){
+    console.log(event)
+    showTime(event.target.value)
   
-}
-movieSearch();
+ }
  
  
