@@ -19,6 +19,7 @@ movies.innerHTML=filteredMovies.map(movie=>movieTime(movie)).join("")
   let movies = document.querySelector(".movie__lists");
   movies.innerHTML = sortedMovies.map(movie => movieTime(movie)).join("");
 }
+
 }
 
 showTime()
@@ -41,5 +42,13 @@ showTime()
     showTime(event.target.value)//The value event.target.value is same as filter==="movieName" in if condition 
   //here we are calling showTime()function with value what we get onchanging the filter and based on value we choose then comes the if condtion on value we got after changing
  }
- 
+ async  function searchMovies(event){
+   const searchItem= event.target.value;
+  const response=await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=9a6c4194&s=${searchItem}`);
+  const data= await response.json();
+  moviesData=data.Search;
+  movieTime(movie)
+  document.querySelector(".searchingMovie").onclick("input", searchMovies);
+
+ }
  

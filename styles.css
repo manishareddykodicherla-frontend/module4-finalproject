@@ -42,6 +42,21 @@ padding:20px;
 display: flex;
 flex-direction: row; 
 flex-wrap:wrap;
+margin-top:80px;
+}
+.header__row{
+    display:flex;
+    justify-content: space-around;
+}
+.search{
+    position:relative;
+}
+.searchingMovie{
+    position:absolute;
+    top:0px;
+    left:180px;
+    margin: 20px;
+    padding:10px;
 }
 .movie__list{
     border: 5px solid aliceblue;
@@ -49,6 +64,12 @@ flex-wrap:wrap;
     padding:2px 16px;
     margin:20px;
 
+}
+.loading{
+    display:none;
+}
+ .loading .movie___loading{
+    display:block;
 }
 .movieImage{
     width:50px;
@@ -59,16 +80,25 @@ flex-wrap:wrap;
 }
 .filter{
     width:50px;
-    position: relative;
-    
+    position: relative; 
+    margin-top:20px;  
 }
 .movieFilter{
     position:absolute;
     top: 0;
-    left:900px;
+    left:450px;
     padding:10px;
     margin-bottom:10px;
 }
 .row{
     display:flex;
+}
+footer{
+    background-color: rgb(225, 235, 232);
+}
+.footer__para{
+    text-align: center;
+    font-size: 24px;
+    color: rgb(211, 145, 145);
+    padding:100px;
 }

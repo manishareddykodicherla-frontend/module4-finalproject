@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/86e6d10ff8.js" crossorigin="anonymous"></script>
 </head> 
 <nav>
         <figure class="movie">
@@ -12,13 +13,17 @@
         </figure>
         <ul class="nav__lists">
             <li class="nav__list"><a href="">Home</a></li>
-           <li class="nav__list"><a href=".movie__lists">Movies</a></li>
-           <li class="nav__list"> <a href=".moviePrice">Tickets</a></li>
+           <li class="nav__list"><a href="#movies">Movies</a></li>
+           <li class="nav__list"> <a href="#price">Tickets</a></li>
         </ul>
     </nav>
 <body>
  <div class="container">
     <div class="row">
+        <div class="header__row">
+        <div class="search" onclick="searchMovie(event)">
+            <input type="text" placeholder="Search for a movie" class="searchingMovie">
+        </div>
         <div class="filter">
         <select class="movieFilter" onChange="movieSearch(event)">
             <option value="" selected disabled>sort</option>
@@ -26,12 +31,16 @@
             <option value="movieName">movie Name</option>   
         </select>
     </div> 
+    </div>
         <div class="movie__lists">
-             <div class="movie__list">
+            <div class="loading">
+<i class="fa-solid fa-spinner movie__loading"></i>
+            </div>
+             <div  id=movies class="movie__list">
     <figure class="movieImage">
         <img src="" class="movielogo">
     </figure>
-    <h2 class="moviePrice">MoviePrice</h2>
+    <h2  id=#tickets class="moviePrice">MoviePrice</h2>
     <h4 class="name">MovieName</h4>
     <h4 class="Year">Year</h4>
     <h4 class="imdb">IMDB</h4>
@@ -45,6 +54,6 @@
 </body>
 <script src="index.js"></script>
 <footer>
-     <h4></h4>
+     <h4 class="footer__para">Project done by Manisha</h4>
     </footer>
 </html>
