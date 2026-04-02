@@ -48,7 +48,7 @@ showTime()
   const data= await response.json();
   moviesData=data.Search;
   movieTime(movie)
-  document.querySelector(".searchingMovie").onclick("input", searchMovies);
+  document.querySelector(".searchingMovie").addEventListener("input", searchMovies);
 
  }
  
