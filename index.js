@@ -49,5 +49,5 @@ showTime()
    const moviesData = data.Search || [];
   const movies = document.querySelector(".movie__lists");
   movies.innerHTML = moviesData.map((movie) => movieTime(movie)).join("");
-
+document.querySelector(".searchingMovie").addEventListener("input", searchMovies);
 }
